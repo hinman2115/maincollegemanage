@@ -3,7 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#D2EFEB"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="20dp"
     tools:context=".selection_layout">
 
 <!--    <ImageView-->
@@ -28,12 +31,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textSize="24dp"
+        android:textSize="22dp"
         android:textColor="@color/black"
-        android:textStyle="italic"
+        android:textStyle="bold"
         android:gravity="center"
+        android:fontFamily="cursive"
         app:layout_constraintVertical_bias="0"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
 
         />
 
@@ -42,26 +46,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ADMIN"
-        android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/t1"
         app:layout_constraintVertical_bias="0"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="20dp"
         />
     <Button
         android:id="@+id/Student_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Student"
-        android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/admin_button"
         app:layout_constraintVertical_bias="0"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
