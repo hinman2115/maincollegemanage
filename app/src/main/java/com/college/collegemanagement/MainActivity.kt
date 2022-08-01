@@ -24,12 +24,19 @@ class MainActivity : AppCompatActivity() {
 
         val a =intent.getIntExtra("Ad",0)
 
-
-
-        log.setOnClickListener(){
-            intent= Intent(this,Main_Layout::class.java)
-            startActivity(intent)
+        if(a == 11){
+            log.setOnClickListener(){
+                intent= Intent(this,admin_layout::class.java)
+                startActivity(intent)
+            }
+        }else{
+            log.setOnClickListener(){
+                intent= Intent(this,Main_Layout::class.java)
+                startActivity(intent)
+            }
         }
+
+
 
 
         val adapter = MyViewPagerAdapter(supportFragmentManager)
