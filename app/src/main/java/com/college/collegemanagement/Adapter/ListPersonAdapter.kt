@@ -36,8 +36,7 @@ init {
     }
 
     override fun getItemId(p0: Int): Long {
-//        return lstPerson[p0].id.toLong()
-        return 0
+      return lstPerson[p0].id.toLong()
     }
 
     @RequiresApi(Build.VERSION_CODES.P)
@@ -45,9 +44,9 @@ init {
         val rowView:View
         rowView=inflater.inflate(R.layout.row_layout,null)
 
-//        rowView.txt_row_id.text=lstPerson[p0].Id.toString()
+        rowView.txt_row_id.text=lstPerson[p0].id.toString()
         rowView.txt_row_name.text=lstPerson[p0].name.toString()
-//        rowView.txt_row_email.text=lstPerson[p0].Email.toString()
+        rowView.txt_row_email.text=lstPerson[p0].email.toString()
 
         rowView.setOnClickListener{
             edt_id.setText(rowView.txt_row_id.text.toString())
