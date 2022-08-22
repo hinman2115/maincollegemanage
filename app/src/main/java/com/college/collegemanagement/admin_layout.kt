@@ -1,10 +1,12 @@
 package com.college.collegemanagement
 
 
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.college.collegemanagement.Adapter.ListPersonAdapter
 import com.college.collegemanagement.DBHelper.DBHelper
@@ -18,6 +20,7 @@ class admin_layout : AppCompatActivity() {
 
     var list:ListView?=null
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin_layout)
@@ -27,6 +30,11 @@ class admin_layout : AppCompatActivity() {
         var delete = findViewById<Button>(R.id.btn_delete)
         var edt_id = findViewById<EditText>(R.id.edt_id)
         var edt_name = findViewById<EditText>(R.id.edt_name)
+        var edt_m_name = findViewById<EditText>(R.id.edt_m_name)
+        var edt_l_name = findViewById<EditText>(R.id.edt_l_name)
+        var edt_gender = findViewById<EditText>(R.id.edt_gender)
+        var edt_dob = findViewById<EditText>(R.id.edt_dob)
+        var edt_mobile = findViewById<EditText>(R.id.edt_mobile)
         var edt_email = findViewById<EditText>(R.id.edt_email)
 
 
@@ -38,36 +46,78 @@ class admin_layout : AppCompatActivity() {
             val person = Person(
                 Integer.parseInt(edt_id.text.toString()),
                 edt_name.text.toString(),
+                edt_m_name.text.toString(),
+                edt_l_name.text.toString(),
+                edt_gender.text.toString(),
+                edt_dob.text.toString(),
+                edt_mobile.text.toString(),
                 edt_email.text.toString()
+
+
             )
             db.addPerson(person)
             refershData()
+            edt_id.setText("")
+            edt_name.setText("")
+            edt_m_name.setText("")
+            edt_l_name.setText("")
+            edt_gender.setText("")
+            edt_dob.setText("")
+            edt_mobile.setText("")
+            edt_email.setText("")
+
         }
         update.setOnClickListener {
             val person = Person(
                 Integer.parseInt(edt_id.text.toString()),
                 edt_name.text.toString(),
+                edt_m_name.text.toString(),
+                edt_l_name.text.toString(),
+                edt_gender.text.toString(),
+                edt_dob.text.toString(),
+                edt_mobile.text.toString(),
                 edt_email.text.toString()
             )
             db.updatePerson(person)
             refershData()
+            edt_id.setText("")
+            edt_name.setText("")
+            edt_m_name.setText("")
+            edt_l_name.setText("")
+            edt_gender.setText("")
+            edt_dob.setText("")
+            edt_mobile.setText("")
+            edt_email.setText("")
         }
         delete.setOnClickListener {
             val person = Person(
                 Integer.parseInt(edt_id.text.toString()),
                 edt_name.text.toString(),
+                edt_m_name.text.toString(),
+                edt_l_name.text.toString(),
+                edt_gender.text.toString(),
+                edt_dob.text.toString(),
+                edt_mobile.text.toString(),
                 edt_email.text.toString()
             )
             db.deletePerson(person)
             refershData()
+            edt_id.setText("")
+            edt_name.setText("")
+            edt_m_name.setText("")
+            edt_l_name.setText("")
+            edt_gender.setText("")
+            edt_dob.setText("")
+            edt_mobile.setText("")
+            edt_email.setText("")
         }
 
     }
 
-
+//    ,m_name:String,l_name:String,gender:String,dob:String,mobile:String
     private fun refershData() {
         lstPersons = db.allPeron
-        val adapter = ListPersonAdapter(this@admin_layout, lstPersons, edt_id, edt_name, edt_email)
+        val adapter = ListPersonAdapter(this@admin_layout, lstPersons, edt_id, edt_name,edt_m_name,edt_l_name,edt_gender,edt_dob,edt_mobile,edt_email)
         list?.adapter = adapter
 
     }

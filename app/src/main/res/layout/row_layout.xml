@@ -17,7 +17,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        >
 
         <TextView
             android:id="@+id/txt_row_name"
@@ -26,6 +28,76 @@
             android:layout_weight="1"
             android:text="haaris"
             android:textColor="@color/black" />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_row_m_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="middle name"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/txt_row_l_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="last name"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_row_gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="gender"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/txt_row_dob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Date of Birth"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_row_mobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="123456789"
+            android:textColor="@color/black" />
+
 
         <TextView
             android:id="@+id/txt_row_email"
@@ -37,5 +109,6 @@
 
 
     </LinearLayout>
+
 
 </LinearLayout>

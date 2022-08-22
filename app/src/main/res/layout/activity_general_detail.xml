@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".general_detail">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="General Details"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/id_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stud ID"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/m_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stud ID"
+        app:layout_constraintTop_toTopOf="@id/id_txt"
+        app:layout_constraintBottom_toBottomOf="@id/id_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0"
+        />
+
+    <TextView
+        android:id="@+id/name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        app:layout_constraintTop_toBottomOf="@id/id_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/m_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        app:layout_constraintTop_toTopOf="@id/name_txt"
+        app:layout_constraintBottom_toBottomOf="@id/name_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/middle_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Middle Name"
+        app:layout_constraintTop_toBottomOf="@id/name_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/m_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Middle Name"
+        app:layout_constraintTop_toTopOf="@id/middle_txt"
+        app:layout_constraintBottom_toBottomOf="@id/middle_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0" />
+    <TextView
+        android:id="@+id/last_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        app:layout_constraintTop_toBottomOf="@id/middle_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/m_last"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        app:layout_constraintTop_toTopOf="@id/last_txt"
+        app:layout_constraintBottom_toBottomOf="@id/last_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/gender_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        app:layout_constraintTop_toBottomOf="@id/last_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/m_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        app:layout_constraintTop_toTopOf="@id/gender_txt"
+        app:layout_constraintBottom_toBottomOf="@id/gender_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/dob_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of Birth"
+        app:layout_constraintTop_toBottomOf="@id/gender_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/m_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of Birth"
+        app:layout_constraintTop_toTopOf="@id/dob_txt"
+        app:layout_constraintBottom_toBottomOf="@id/dob_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/mobile_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile"
+        app:layout_constraintTop_toBottomOf="@id/dob_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/m_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile"
+        app:layout_constraintTop_toTopOf="@id/mobile_txt"
+        app:layout_constraintBottom_toBottomOf="@id/mobile_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0" />
+    <TextView
+        android:id="@+id/email_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        app:layout_constraintTop_toBottomOf="@id/mobile_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/m_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        app:layout_constraintTop_toTopOf="@id/email_txt"
+        app:layout_constraintBottom_toBottomOf="@id/email_txt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

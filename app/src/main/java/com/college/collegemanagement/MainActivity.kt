@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -18,23 +19,33 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 //        val login = findViewById<Button>(R.id.main);
         val viewPager =findViewById<ViewPager>(R.id.viewPager);
-        val log=findViewById<Button>(R.id.main)
+//        val log=findViewById<Button>(R.id.main)
+        val admin_name=findViewById<EditText>(R.id.name)
+        val admin_password=findViewById<EditText>(R.id.c_password)
 //        val text=findViewById<TextView>(R.id.sign_text)
 
 
         val a =intent.getIntExtra("Ad",0)
 
-        if(a == 11){
-            log.setOnClickListener(){
-                intent= Intent(this,admin_layout::class.java)
-                startActivity(intent)
-            }
-        }else{
-            log.setOnClickListener(){
-                intent= Intent(this,Main_Layout::class.java)
-                startActivity(intent)
-            }
-        }
+
+       
+
+//        if(a == 11){
+////            if(admin_name.text.equals("Admin") && admin_password.text.equals("12345")) {
+//                log.setOnClickListener() {
+//
+//                    intent = Intent(this, admin_layout::class.java)
+//                    startActivity(intent)
+//                }
+////            }else{
+////                Toast.makeText(this, "Please Enter Valid Username and Password", Toast.LENGTH_SHORT).show()
+////            }
+//        }else{
+//            log.setOnClickListener(){
+//                intent= Intent(this,Main_Layout::class.java)
+//                startActivity(intent)
+//            }
+//        }
 
 
 

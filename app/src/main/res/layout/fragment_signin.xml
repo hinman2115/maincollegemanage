@@ -84,6 +84,23 @@
 
     </EditText>
 
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            app:backgroundTint="#669CB1"
+            app:tint="#ffffff"
+            android:id="@+id/admin_login"
+            android:text="login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="10dp"
+            android:layout_marginTop="50dp"
+            app:pressedTranslationZ="5dp"
+            app:layout_constraintHorizontal_bias=".5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/c_password"
+            app:layout_constraintVertical_bias="0" />
+
 <!--    <EditText-->
 <!--        android:id="@+id/password2"-->
 <!--        android:layout_width="match_parent"-->

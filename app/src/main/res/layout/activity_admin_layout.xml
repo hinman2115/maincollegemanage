@@ -12,24 +12,76 @@
         android:layout_height="wrap_content"
         android:text="Add Student"
         android:textSize="30dp"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
         android:textStyle="bold"
         android:textColor="@color/black"
         />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/edt_id"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:paddingLeft="20dp"
+
+        android:background="@drawable/border"
         android:hint="ID"/>
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/border"
         android:id="@+id/edt_name"
         android:hint="Name"/>
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/border"
+        android:id="@+id/edt_m_name"
+        android:hint="Middle Name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/border"
+        android:id="@+id/edt_l_name"
+        android:hint="Last Name"/>
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginHorizontal="20dp"
+    android:paddingLeft="20dp"
+    android:background="@drawable/border"
+    android:id="@+id/edt_gender"
+    android:hint="Gender"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/border"
+        android:id="@+id/edt_dob"
+        android:hint="Date of Birth"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/border"
+        android:id="@+id/edt_mobile"
+        android:hint="Mobile No."/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/border"
         android:id="@+id/edt_email"
         android:hint="Email"/>
 
@@ -37,6 +89,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:weightSum="3">
 
         <Button
@@ -44,6 +98,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_add"
             android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
             android:text="add"/>
 
         <Button
@@ -51,6 +106,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_update"
             android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
             android:text="update"/>
 
         <Button
@@ -58,6 +114,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_delete"
             android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
             android:text="delete"/>
 
 
