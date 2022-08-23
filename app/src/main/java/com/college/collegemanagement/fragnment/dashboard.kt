@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.college.collegemanagement.*
@@ -29,11 +30,16 @@ class dashboard : Fragment() {
         val timeTable = view.findViewById<CardView>(R.id.card2)
         val general = view.findViewById<CardView>(R.id.card1)
         val holiday = view.findViewById<CardView>(R.id.card3)
+        val lerning = view.findViewById<CardView>(R.id.card4)
         val result = view.findViewById<CardView>(R.id.card5)
         val feePayment = view.findViewById<CardView>(R.id.card6)
+        var text= view.findViewById<TextView>(R.id.s_name)
         var id:String? =""
         val bundle = arguments
         id = bundle!!.getString("id2")
+
+        text.setText(id.toString())
+
 //        Toast.makeText(context, id.toString(), Toast.LENGTH_SHORT).show()
 
 
@@ -61,6 +67,11 @@ class dashboard : Fragment() {
         }
         feePayment.setOnClickListener {
             val intent = Intent(context,fee_payment::class.java)
+            startActivity(intent)
+//            Toast.makeText((activity as Main_Layout?),"done",Toast.LENGTH_SHORT).show()
+        }
+        lerning.setOnClickListener {
+            val intent = Intent(context,lerning_material::class.java)
             startActivity(intent)
 //            Toast.makeText((activity as Main_Layout?),"done",Toast.LENGTH_SHORT).show()
         }
