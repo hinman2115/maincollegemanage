@@ -1,8 +1,10 @@
 package com.college.collegemanagement
 
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
@@ -13,18 +15,21 @@ import com.college.collegemanagement.DBHelper.DBHelper
 import com.college.collegemanagement.Model.Person
 import kotlinx.android.synthetic.main.activity_admin_layout.*
 
+
 class admin_layout : AppCompatActivity() {
+
 
     internal lateinit var db: DBHelper
     internal var lstPersons: List<Person> = ArrayList<Person>()
 
-    var list:ListView?=null
+    var list: ListView? = null
 
+    @SuppressLint("WrongViewCast")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin_layout)
-         list = findViewById<ListView>(R.id.list_person)
+        list = findViewById<ListView>(R.id.list_person)
         var add = findViewById<Button>(R.id.btn_add)
         var update = findViewById<Button>(R.id.btn_update)
         var delete = findViewById<Button>(R.id.btn_delete)
@@ -36,11 +41,27 @@ class admin_layout : AppCompatActivity() {
         var edt_dob = findViewById<EditText>(R.id.edt_dob)
         var edt_mobile = findViewById<EditText>(R.id.edt_mobile)
         var edt_email = findViewById<EditText>(R.id.edt_email)
+        var btnclick = findViewById<Button>(R.id.Clickbtn)
+
+
+        btnclick.setOnClickListener {
+            val isVisible = hidething.visibility
+            if (isVisible == View.VISIBLE) {
+                hidething.visibility = View.GONE
+            } else {
+                hidething.visibility = View.VISIBLE
+            }
+        }
+
 
 
         db = DBHelper(this)
 
         refershData()
+
+
+
+
 
         add.setOnClickListener {
             val person = Person(
@@ -52,9 +73,8 @@ class admin_layout : AppCompatActivity() {
                 edt_dob.text.toString(),
                 edt_mobile.text.toString(),
                 edt_email.text.toString()
-
-
             )
+
             db.addPerson(person)
             refershData()
             edt_id.setText("")
@@ -114,10 +134,20 @@ class admin_layout : AppCompatActivity() {
 
     }
 
-//    ,m_name:String,l_name:String,gender:String,dob:String,mobile:String
     private fun refershData() {
         lstPersons = db.allPeron
-        val adapter = ListPersonAdapter(this@admin_layout, lstPersons, edt_id, edt_name,edt_m_name,edt_l_name,edt_gender,edt_dob,edt_mobile,edt_email)
+        val adapter = ListPersonAdapter(
+            this@admin_layout,
+            lstPersons,
+            edt_id,
+            edt_name,
+            edt_m_name,
+            edt_l_name,
+            edt_gender,
+            edt_dob,
+            edt_mobile,
+            edt_email
+        )
         list?.adapter = adapter
 
     }

@@ -30,8 +30,6 @@ init {
     inflater = activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
 }
-
-    
     override fun getCount(): Int {
         return  lstPerson.size
     }

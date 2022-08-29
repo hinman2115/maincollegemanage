@@ -2,12 +2,15 @@ package com.college.collegemanagement.fragnment
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Camera
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
@@ -18,8 +21,10 @@ import kotlinx.android.synthetic.main.fragment_dashboard.view.*
 
 
 class dashboard : Fragment() {
+      fun main() {
 
 
+      }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,13 +40,12 @@ class dashboard : Fragment() {
         val feePayment = view.findViewById<CardView>(R.id.card6)
         var text= view.findViewById<TextView>(R.id.s_name)
         var id:String? =""
+        var imgedo = view.findViewById<ImageView>(R.id.imgdo)
         val bundle = arguments
         id = bundle!!.getString("id2")
 
         text.setText(id.toString())
-
-//        Toast.makeText(context, id.toString(), Toast.LENGTH_SHORT).show()
-
+        val iCamera = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
 
         timeTable.setOnClickListener {
            val intent = Intent(context,time_table::class.java)

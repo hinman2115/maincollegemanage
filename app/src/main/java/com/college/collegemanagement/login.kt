@@ -25,11 +25,6 @@ class login : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-
-
-//        var v:View =
-//            return  inflater.inflate(R.layout.fragment_login, container, false)
 
         val view: View = inflater!!.inflate(R.layout.fragment_login, container, false)
 
@@ -39,38 +34,20 @@ class login : Fragment() {
         val user=view.findViewById<EditText>(R.id.email)
         val pass=view.findViewById<EditText>(R.id.password)
 
-
-
-
         login.setOnClickListener{
             var check_user= user.text.toString()
             var check_pass= pass.text.toString()
             
             if (db != null) {
                 if(db.userPresent(user.text.toString(),pass.text.toString())){
-//                   newal =  db.getDetails(user.text.toString())
-
                     val intent = Intent(context, Main_Layout::class.java)
                     intent.putExtra("id",user.text.toString())
-//                    intent.putExtra("list",newal)
-
                     startActivity(intent)
                 }else{
                     Toast.makeText(context,"Invalid Details",Toast.LENGTH_SHORT).show()
                 }
             }
-
-//            val intent = Intent(context, Main_Layout::class.java)
-//            startActivity(intent)
         }
-
         return view
-
-
-
-//        return v
     }
-
-
-
 }

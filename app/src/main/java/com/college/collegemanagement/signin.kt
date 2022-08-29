@@ -18,17 +18,12 @@ class signin : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view: View = inflater!!.inflate(R.layout.fragment_signin, container, false)
-//        Toast.makeText(context,"hello",Toast.LENGTH_SHORT).show()
 
         val login=view.findViewById<Button>(R.id.admin_login)
         val uname=view.findViewById<EditText>(R.id.name)
         val pass=view.findViewById<EditText>(R.id.c_password)
 
-
-
-
         login.setOnClickListener{
-
             if(uname.text.toString().equals("Admin") && pass.text.toString().equals("12345")){
                 val intent = Intent(context, admin_layout::class.java)
                 startActivity(intent)
@@ -38,5 +33,4 @@ class signin : Fragment() {
         }
         return view
     }
-
 }

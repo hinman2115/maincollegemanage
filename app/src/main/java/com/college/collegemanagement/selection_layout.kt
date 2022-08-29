@@ -18,7 +18,6 @@ class selection_layout : AppCompatActivity() {
             val intent =Intent(context,MainActivity::class.java)
             intent.putExtra("Ad",11)
             startActivity(intent)
-
         }
 
         student.setOnClickListener{
@@ -27,8 +26,5 @@ class selection_layout : AppCompatActivity() {
             startActivity(intent)
 
         }
-
-
-
     }
 }

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
     tools:context=".admin_layout"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <TextView
@@ -18,72 +20,95 @@
         android:textColor="@color/black"
         />
 
-    <EditText
-        android:id="@+id/edt_id"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="20dp"
-        android:paddingLeft="20dp"
+    <Button
+        android:id="@+id/Clickbtn"
+        android:layout_width="100sp"
+        android:layout_height="85dp"
+        android:background="@drawable/custom_file"
+        android:backgroundTint="@color/teal_200"
+        android:text="for add or edit details" />
 
-        android:background="@drawable/border"
-        android:hint="ID"/>
-    <EditText
+    <LinearLayout
+        android:id="@+id/hidething"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="20dp"
-        android:paddingLeft="20dp"
-        android:background="@drawable/border"
-        android:id="@+id/edt_name"
-        android:hint="Name"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="20dp"
-        android:paddingLeft="20dp"
-        android:background="@drawable/border"
-        android:id="@+id/edt_m_name"
-        android:hint="Middle Name"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="20dp"
-        android:paddingLeft="20dp"
-        android:background="@drawable/border"
-        android:id="@+id/edt_l_name"
-        android:hint="Last Name"/>
-    <EditText
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:layout_marginHorizontal="20dp"
-    android:paddingLeft="20dp"
-    android:background="@drawable/border"
-    android:id="@+id/edt_gender"
-    android:hint="Gender"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="20dp"
-        android:paddingLeft="20dp"
-        android:background="@drawable/border"
-        android:id="@+id/edt_dob"
-        android:hint="Date of Birth"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="20dp"
-        android:paddingLeft="20dp"
-        android:background="@drawable/border"
-        android:id="@+id/edt_mobile"
-        android:hint="Mobile No."/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="20dp"
-        android:paddingLeft="20dp"
-        android:background="@drawable/border"
-        android:id="@+id/edt_email"
-        android:hint="Email"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edt_id"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+
+            android:hint="ID"
+            android:textColorHint="@color/black"
+            android:paddingLeft="20dp" />
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/border"
+            android:hint="Name"
+            android:paddingLeft="20dp" />
+
+        <EditText
+            android:id="@+id/edt_m_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/border"
+            android:hint="Middle Name"
+            android:paddingLeft="20dp" />
+
+        <EditText
+            android:id="@+id/edt_l_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/border"
+            android:hint="Last Name"
+            android:paddingLeft="20dp" />
+
+        <EditText
+            android:id="@+id/edt_gender"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/border"
+            android:hint="Gender"
+            android:paddingLeft="20dp" />
+
+        <EditText
+            android:id="@+id/edt_dob"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/border"
+            android:hint="Date of Birth"
+            android:paddingLeft="20dp" />
+
+        <EditText
+            android:id="@+id/edt_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/border"
+            android:hint="Mobile No."
+            android:paddingLeft="20dp" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/border"
+            android:hint="Email"
+            android:paddingLeft="20dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -121,6 +146,8 @@
 
 
     </LinearLayout>
+    </LinearLayout>
+
 
     <ListView
         android:layout_width="match_parent"

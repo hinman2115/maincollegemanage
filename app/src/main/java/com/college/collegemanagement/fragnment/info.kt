@@ -12,7 +12,6 @@ import com.college.collegemanagement.R
 
 class info : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

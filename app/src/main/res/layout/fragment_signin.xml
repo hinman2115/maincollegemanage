@@ -1,128 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    android:gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".signin">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/signin_txt"
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="363dp"
+        android:layout_height="400dp"
+        android:background="@drawable/custom_file"
+        android:backgroundTint="@color/material_on_background_disabled">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginHorizontal="50dp"
-            android:text="ADMIN LOGIN"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0"/>
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginHorizontal="50dp"
-        android:drawableStart="@drawable/ic_baseline_account_circle_24"
-        android:layout_marginTop="10dp"
-        android:drawablePadding="15sp"
-        android:hint="Username"
-        android:background="@drawable/border"
-        android:inputType="text"
-        android:padding="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/signin_txt"
-        app:layout_constraintVertical_bias="0" />
+            android:orientation="vertical">
 
-<!--    <EditText-->
-<!--        android:id="@+id/number"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_marginHorizontal="50dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:hint="Phone Number"-->
-<!--        android:background="@drawable/border"-->
-<!--        android:padding="15dp"-->
-<!--        android:inputType="number"-->
-<!--        android:drawableStart="@drawable/ic_baseline_phone_24"-->
-<!--        android:drawablePadding="15sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.505"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/name"-->
-<!--        app:layout_constraintVertical_bias="0"/>-->
+            <TextView
+                android:id="@+id/signin_txt"
+                android:layout_width="247dp"
+                android:layout_height="53dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="ADMIN LOGIN"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0" />
 
-    <EditText
-        android:id="@+id/c_password"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginHorizontal="50dp"
-        android:padding="15dp"
-        android:background="@drawable/border"
-        android:layout_marginTop="10dp"
-        android:drawableLeft="@drawable/ic_baseline_lock_24"
-        android:drawablePadding="15sp"
-        android:hint="Password"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/name"
-        app:layout_constraintVertical_bias="0"
-        android:layout_marginBottom="10dp">
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_file"
+                android:drawableStart="@drawable/ic_baseline_account_circle_24"
+                android:drawablePadding="15sp"
+                android:hint="Username"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signin_txt"
+                app:layout_constraintVertical_bias="0" />
 
-    </EditText>
+            <!--    <EditText-->
+            <!--        android:id="@+id/number"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="60dp"-->
+            <!--        android:layout_marginHorizontal="50dp"-->
+            <!--        android:layout_marginTop="10dp"-->
+            <!--        android:hint="Phone Number"-->
+            <!--        android:background="@drawable/border"-->
+            <!--        android:padding="15dp"-->
+            <!--        android:inputType="number"-->
+            <!--        android:drawableStart="@drawable/ic_baseline_phone_24"-->
+            <!--        android:drawablePadding="15sp"-->
+            <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--        app:layout_constraintHorizontal_bias="0.505"-->
+            <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--        app:layout_constraintRight_toRightOf="parent"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/name"-->
+            <!--        app:layout_constraintVertical_bias="0"/>-->
 
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            app:backgroundTint="#669CB1"
-            app:tint="#ffffff"
-            android:id="@+id/admin_login"
-            android:text="login"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:elevation="10dp"
-            android:layout_marginTop="50dp"
-            app:pressedTranslationZ="5dp"
-            app:layout_constraintHorizontal_bias=".5"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/c_password"
-            app:layout_constraintVertical_bias="0" />
+            <EditText
+                android:id="@+id/c_password"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_file"
+                android:drawableLeft="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="15sp"
+                android:hint="Password"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintVertical_bias="0">
 
-<!--    <EditText-->
-<!--        android:id="@+id/password2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_marginHorizontal="50dp"-->
-<!--        android:drawableStart="@drawable/ic_baseline_lock_24"-->
-<!--        android:drawableLeft="@drawable/ic_baseline_lock_24"-->
-<!--        android:drawablePadding="15dp"-->
-<!--        android:padding="15dp"-->
-<!--        android:background="@drawable/border"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:hint="Confirm Password"-->
-<!--        android:inputType="textPassword"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.505"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/c_password"-->
-<!--        app:layout_constraintVertical_bias="0" >-->
+            </EditText>
 
-<!--    </EditText>-->
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/admin_login"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="50dp"
+                android:elevation="10dp"
+                android:text="login"
+                app:backgroundTint="#669CB1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias=".5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/c_password"
+                app:layout_constraintVertical_bias="0"
+                app:pressedTranslationZ="5dp"
+                app:tint="#ffffff" />
 
-</FrameLayout>
+            <!--    <EditText-->
+            <!--        android:id="@+id/password2"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="60dp"-->
+            <!--        android:layout_marginHorizontal="50dp"-->
+            <!--        android:drawableStart="@drawable/ic_baseline_lock_24"-->
+            <!--        android:drawableLeft="@drawable/ic_baseline_lock_24"-->
+            <!--        android:drawablePadding="15dp"-->
+            <!--        android:padding="15dp"-->
+            <!--        android:background="@drawable/border"-->
+            <!--        android:layout_marginTop="10dp"-->
+            <!--        android:layout_marginBottom="10dp"-->
+            <!--        android:hint="Confirm Password"-->
+            <!--        android:inputType="textPassword"-->
+            <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--        app:layout_constraintHorizontal_bias="0.505"-->
+            <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--        app:layout_constraintRight_toRightOf="parent"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/c_password"-->
+            <!--        app:layout_constraintVertical_bias="0" >-->
+
+            <!--    </EditText>-->
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
